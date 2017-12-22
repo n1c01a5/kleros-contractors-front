@@ -8,6 +8,9 @@ class App extends Component {
       <div className="container">
         <div className="flex-container">
           <div className="flex-item wide contract">
+            <div className="type">
+              Profile
+            </div>
             <Blockies
               seed="Jeremy"
               size={15}
@@ -16,6 +19,9 @@ class App extends Component {
               bgcolor='#aaa'
               spotcolor='#000'
             />
+            <div className="content">
+              0x4d010...87f
+            </div>
           </div>
 
           <div className="flex-item wide utility">
@@ -127,6 +133,7 @@ class App extends Component {
             display: flex;
             flex-direction: column;
             background: #000;
+            font-family: 'Open Sans Condensed', sans-serif;
           }
 
           .flex-container {
@@ -139,6 +146,8 @@ class App extends Component {
           }
 
           .flex-item {
+            display: flex;
+            flex-direction: row;
             box-sizing: border-box;
             border: 7px solid #fff;
             padding: 10px;
@@ -150,8 +159,29 @@ class App extends Component {
             min-width: 400px;
           }
 
+          .type {
+            padding: 5px 15px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid lightgray;
+            border-left-color: #00aba9;
+            border-bottom-color: #00aba9;
+            border-bottom-left-radius: 10px;
+            color: gray;
+          }
+
           .identicon {
             border-radius: 10px;
+          }
+
+          .content {
+            position: relative;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 40px;
+            padding-left: 10px;
+            top: -12px;
           }
 
           .footer {
