@@ -5,29 +5,29 @@ class App extends Component {
     return (
       <div className="container">
         <div className="flex-container">
-          <div className="flex-item wide system">
+          <div className="flex-item wide contract">
             <div className="flex-item-label">Desktop</div>
           </div>
 
-          <div className="flex-item wide productivity">
+          <div className="flex-item wide utility">
             <div className="flex-item-label">
               Mail
             </div>
           </div>
 
-          <div className="flex-item wide social">
+          <div className="flex-item wide apps">
             <div className="flex-item-label">
               People
             </div>
           </div>
 
-          <div className="flex-item wide utility">
+          <div className="flex-item wide media">
             <div className="flex-item-label">
               Weather
             </div>
           </div>
 
-          <div className="flex-item wide fun">
+          <div className="flex-item wide media">
             <div className="flex-item-label">
               Maps
             </div>
@@ -45,7 +45,7 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="flex-item wide productivity">
+          <div className="flex-item wide calendar">
             <div className="flex-item-label">
               Calendar
             </div>
@@ -88,61 +88,68 @@ class App extends Component {
           }
 
           .flex-container {
-              width: 100%;
-              display: flex;
-              flex-direction: row;
-              flex-wrap: wrap;
-              justify
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            border: 8px solid #fff;
+
           }
 
           .flex-item {
-              padding: 10px;
-              position: relative;
+            box-sizing: border-box;
+            border: 8px solid #fff;
+            padding: 10px;
+            position: relative;
           }
 
           .wide {
-              height: 80px;
-              min-width: 300px;
-              flex:1;
+            flex:1;
+            height: 170px;
+            min-width: 300px;
           }
-
 
           .footer {
             flex: 1;
-            background: red;
+            background: #f4f4f4;
             min-height: 80px;
           }
 
-          .system {
-              background: #1e7983;
+          .contract {
+              background: #f4f4f4;
           }
 
           .utility {
-              background: #2776ec;
+              background: #a1c9ff;
           }
 
           .apps {
-              background: #00566b;
+              background: lightgray;
           }
 
           .media {
-              background: #ad193e;
+              background: #e7dfdd;
           }
 
-          .productivity {
-              background: #008b17;
+          .profile {
+              background: #fffa7a;
           }
 
           .social {
-              background: #d54c28;
+              background: #fffa7a;
           }
 
           .fun {
-              background: #5c39b7;
+              background: #fffa7a;
           }
 
           .games {
-            background: #63ae1b;
+            background: #c1a7f3;
+          }
+
+          .calendar {
+            background: #f4f4f4;
           }
 
           .flex-item-label {
