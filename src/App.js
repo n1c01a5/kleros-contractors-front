@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Blockies from 'react-blockies';
+
 
 class App extends Component {
   render() {
@@ -6,85 +8,125 @@ class App extends Component {
       <div className="container">
         <div className="flex-container">
           <div className="flex-item wide contract">
-            <div className="flex-item-label">Desktop</div>
+            <Blockies
+              seed="Jeremy"
+              size={15}
+              scale={10}
+              color='#dfe'
+              bgcolor='#aaa'
+              spotcolor='#000'
+            />
           </div>
 
           <div className="flex-item wide utility">
-            <div className="flex-item-label">
-              Mail
-            </div>
+            <Blockies
+              seed="ewfwer"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide apps">
-            <div className="flex-item-label">
-              People
-            </div>
+            <Blockies
+              seed="ewfwef"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide media">
-            <div className="flex-item-label">
-              Weather
-            </div>
+            <Blockies
+              seed="Jere[pdemy"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide media">
-            <div className="flex-item-label">
-              Maps
-            </div>
+            <Blockies
+              seed="Jewderemy"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide utility">
-            <div className="flex-item-label">
-              Store
-            </div>
+            <Blockies
+              seed="Jerwdwdemy"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide media">
-            <div className="flex-item-label">
-              Photos
-            </div>
+            <Blockies
+              seed="Jere[pdemy"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide calendar">
-            <div className="flex-item-label">
-              Calendar
-            </div>
+            <Blockies
+              seed="Jere[pdemy"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide games">
-            <div className="flex-item-label">
-              Games
-            </div>
+            <Blockies
+              seed="Jere[pdemy"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide utility">
-            <div className="flex-item-label">
-              Web Browser
-            </div>
+            <Blockies
+              seed="Jere[pdemy"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide fun">
-            <div className="flex-item-label">
-              Music
-            </div>
+            <Blockies
+              seed="Jere[pdemy"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
 
           <div className="flex-item wide apps">
-            <div className="flex-item-label">
-              App
-            </div>
+            <Blockies
+              seed="Jere[pdemy"
+              size={15}
+              scale={10}
+              bgColor="#fff"
+            />
           </div>
         </div>
 
-        <div className="footer ">
+        <div className="footer">
           Footer
         </div>
 
         <style jsx>{`
           .container {
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            background: #000;
           }
 
           .flex-container {
@@ -93,39 +135,41 @@ class App extends Component {
             flex-direction: row;
             flex-wrap: wrap;
             box-sizing: border-box;
-            border: 8px solid #fff;
-
+            border: 7px solid #fff;
           }
 
           .flex-item {
             box-sizing: border-box;
-            border: 8px solid #fff;
+            border: 7px solid #fff;
             padding: 10px;
             position: relative;
           }
 
           .wide {
             flex:1;
-            height: 170px;
-            min-width: 300px;
+            min-width: 400px;
+          }
+
+          .identicon {
+            border-radius: 10px;
           }
 
           .footer {
             flex: 1;
             background: #f4f4f4;
-            min-height: 80px;
+            min-height: 70px;
           }
 
           .contract {
-              background: #f4f4f4;
+              background: #00aba9;
           }
 
           .utility {
-              background: #a1c9ff;
+              background: #2e7bcc;
           }
 
           .apps {
-              background: lightgray;
+              background: #f39c12;
           }
 
           .media {
@@ -150,12 +194,6 @@ class App extends Component {
 
           .calendar {
             background: #f4f4f4;
-          }
-
-          .flex-item-label {
-            position: absolute;
-            bottom: 8px;
-            left: 15px;
           }
 
         `}</style>
