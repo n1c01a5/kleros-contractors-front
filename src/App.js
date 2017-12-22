@@ -7,14 +7,14 @@ class App extends Component {
     return (
       <div className="container">
         <div className="flex-container">
-          <div className="flex-item wide contract">
+          <div className="flex-item wide contract grow">
             <div className="type">
               Profile
             </div>
             <Blockies
               seed="Jeremy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               color='#dfe'
               bgcolor='#aaa'
               spotcolor='#000'
@@ -24,29 +24,31 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="flex-item wide utility">
+          <div className="flex-item wide utility grow">
             <Blockies
-              seed="ewfwer"
-              size={15}
-              scale={10}
-              bgColor="#fff"
+              seed="Jeremy"
+              size={10}
+              scale={14}
+              color='#dfe'
+              bgcolor='#aaa'
+              spotcolor='#000'
             />
           </div>
 
-          <div className="flex-item wide apps">
+          <div className="flex-item wide apps grow">
             <Blockies
               seed="ewfwef"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
 
-          <div className="flex-item wide media">
+          <div className="flex-item wide media grow">
             <Blockies
               seed="Jere[pdemy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
@@ -54,8 +56,8 @@ class App extends Component {
           <div className="flex-item wide media">
             <Blockies
               seed="Jewderemy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
@@ -63,8 +65,8 @@ class App extends Component {
           <div className="flex-item wide utility">
             <Blockies
               seed="Jerwdwdemy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
@@ -72,8 +74,8 @@ class App extends Component {
           <div className="flex-item wide media">
             <Blockies
               seed="Jere[pdemy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
@@ -81,8 +83,8 @@ class App extends Component {
           <div className="flex-item wide calendar">
             <Blockies
               seed="Jere[pdemy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
@@ -90,8 +92,8 @@ class App extends Component {
           <div className="flex-item wide games">
             <Blockies
               seed="Jere[pdemy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
@@ -99,8 +101,8 @@ class App extends Component {
           <div className="flex-item wide utility">
             <Blockies
               seed="Jere[pdemy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
@@ -108,8 +110,8 @@ class App extends Component {
           <div className="flex-item wide fun">
             <Blockies
               seed="Jere[pdemy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
@@ -117,8 +119,8 @@ class App extends Component {
           <div className="flex-item wide apps">
             <Blockies
               seed="Jere[pdemy"
-              size={15}
-              scale={10}
+              size={10}
+              scale={14}
               bgColor="#fff"
             />
           </div>
@@ -130,9 +132,9 @@ class App extends Component {
 
         <style jsx>{`
           .container {
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background: #000;
             font-family: 'Open Sans Condensed', sans-serif;
           }
 
@@ -149,7 +151,7 @@ class App extends Component {
             display: flex;
             flex-direction: row;
             box-sizing: border-box;
-            border: 7px solid #fff;
+            margin: 7px;
             padding: 10px;
             position: relative;
           }
@@ -159,8 +161,33 @@ class App extends Component {
             min-width: 400px;
           }
 
+          .grow
+          {
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+            cursor: pointer;
+          }
+          .grow:hover
+          {
+            z-index: 2;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1.02);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1.02);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1.02);
+            transition: all 200ms ease-in;
+            transform: scale(1.02);
+          }
+
           .type {
-            padding: 5px 15px;
+            padding: 5px 10px;
             position: absolute;
             top: 0;
             right: 0;
