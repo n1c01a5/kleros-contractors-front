@@ -18,7 +18,9 @@ class App extends Component {
               bgColor="#fff"
             />
             <div className="content">
-              0x4d010...87f
+              <div className="address">0x4d010...87f</div>
+              <div className="balance">0 PNK</div>
+              <div className="activate_pnk">Activate</div>
             </div>
           </div>
 
@@ -187,10 +189,11 @@ class App extends Component {
             position: absolute;
             top: 0;
             right: 0;
-            border-left: 1px solid lightgray;
-            border-bottom: 1px solid lightgray;
             border-bottom-left-radius: 10px;
-            color: gray;
+            border-top-right-radius: 10px;
+            color: #fff;
+            box-sizing: border-box;
+            background: #475053;
           }
 
           .identicon {
@@ -201,8 +204,11 @@ class App extends Component {
           .content {
             position: relative;
             font-family: 'Open Sans Condensed', sans-serif;
-            font-size: 40px;
             padding-left: 10px;
+          }
+
+          .address {
+            font-size: 40px;
           }
 
           .footer {
