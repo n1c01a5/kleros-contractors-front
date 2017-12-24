@@ -15,9 +15,7 @@ class App extends Component {
               seed="Jeremy"
               size={10}
               scale={14}
-              color='#dfe'
-              bgcolor='#aaa'
-              spotcolor='#000'
+              bgColor="#fff"
             />
             <div className="content">
               0x4d010...87f
@@ -29,9 +27,7 @@ class App extends Component {
               seed="Jeremy"
               size={10}
               scale={14}
-              color='#dfe'
-              bgcolor='#aaa'
-              spotcolor='#000'
+              bgColor="#fff"
             />
           </div>
 
@@ -112,7 +108,7 @@ class App extends Component {
               seed="Jere[pdemy"
               size={10}
               scale={14}
-              bgColor="#fff"
+              bgColor="#fffa7a" // timeout contract
             />
           </div>
 
@@ -144,7 +140,7 @@ class App extends Component {
             flex-direction: row;
             flex-wrap: wrap;
             box-sizing: border-box;
-            border: 7px solid #fff;
+            border: 7px solid #f4f4f4;
           }
 
           .flex-item {
@@ -152,8 +148,9 @@ class App extends Component {
             flex-direction: row;
             box-sizing: border-box;
             margin: 7px;
-            padding: 10px;
             position: relative;
+
+            border-radius: 10px;
           }
 
           .wide {
@@ -161,8 +158,7 @@ class App extends Component {
             min-width: 400px;
           }
 
-          .grow
-          {
+          .grow {
             -webkit-transition: all 200ms ease-in;
             -webkit-transform: scale(1);
             -ms-transition: all 200ms ease-in;
@@ -173,8 +169,8 @@ class App extends Component {
             transform: scale(1);
             cursor: pointer;
           }
-          .grow:hover
-          {
+
+          .grow:hover {
             z-index: 2;
             -webkit-transition: all 200ms ease-in;
             -webkit-transform: scale(1.02);
@@ -187,20 +183,19 @@ class App extends Component {
           }
 
           .type {
-            padding: 5px 10px;
+            padding: 2px 10px;
             position: absolute;
             top: 0;
             right: 0;
-            background: #fff;
-            border: 1px solid lightgray;
-            border-left-color: #00aba9;
-            border-bottom-color: #00aba9;
+            border-left: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
             border-bottom-left-radius: 10px;
             color: gray;
           }
 
           .identicon {
-            border-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
           }
 
           .content {
@@ -208,7 +203,6 @@ class App extends Component {
             font-family: 'Open Sans Condensed', sans-serif;
             font-size: 40px;
             padding-left: 10px;
-            top: -12px;
           }
 
           .footer {
@@ -218,19 +212,19 @@ class App extends Component {
           }
 
           .contract {
-              background: #00aba9;
+              background: #fff;
           }
 
           .utility {
-              background: #2e7bcc;
+              background: #fff;
           }
 
           .apps {
-              background: #f39c12;
+              background: #fff;
           }
 
           .media {
-              background: #e7dfdd;
+              background: #fff;
           }
 
           .profile {
