@@ -1,46 +1,45 @@
 import React, { Component } from 'react'
-import { getWeb3 } from './helpers/getWeb3'
-import _ from 'lodash'
+// import { getWeb3 } from '../helpers/getWeb3'
+// import _ from 'lodash'
 import Blockies from 'react-blockies'
-import logo from './assets/kleros.png'
-
+import logo from '../assets/kleros.png'
 
 class App extends Component {
 
   render() {
     // if no web3 show requires metamask page
-    if (typeof getWeb3() === Error) {
-      return (
-        <div>Require web3</div>
-      )
-    }
-
-    const cardsContract = [
-      {
-        seed: '0x8f7AaEa81ee557AeF373795569D3d308474D2A28',
-        bgColor: '#fff',
-        notification: 'profile',
-        parties: [
-          '0x32284083978a18835f9745a81365a0876f90819a',
-          '0x32284083978a18835f9745a81365a0876f90819a'
-        ],
-        rule: '',
-        timeout: 100,
-        className: ''
-      },
-      {
-        content: 'New Contract',
-        notification: 'newContract',
-        className: ''
-      },
-      {
-        seed: '0x8f7AaEa81ee557AeF373795569D3d308474D2A29',
-        bgColor: '#fff',
-        balancePNK: 14,
-        notification: 'contract',
-        className: ''
-      }
-    ]
+    // if (typeof getWeb3() === Error) { => does not work
+    //   return (
+    //     <div>Require web3</div>
+    //   )
+    // }
+    //
+    // const cardsContract = [
+    //   {
+    //     seed: '0x8f7AaEa81ee557AeF373795569D3d308474D2A28',
+    //     bgColor: '#fff',
+    //     notification: 'profile',
+    //     parties: [
+    //       '0x32284083978a18835f9745a81365a0876f90819a',
+    //       '0x32284083978a18835f9745a81365a0876f90819a'
+    //     ],
+    //     rule: '',
+    //     timeout: 100,
+    //     className: ''
+    //   },
+    //   {
+    //     content: 'New Contract',
+    //     notification: 'newContract',
+    //     className: ''
+    //   },
+    //   {
+    //     seed: '0x8f7AaEa81ee557AeF373795569D3d308474D2A29',
+    //     bgColor: '#fff',
+    //     balancePNK: 14,
+    //     notification: 'contract',
+    //     className: ''
+    //   }
+    // ]
 
     return (
       <div>
@@ -164,7 +163,7 @@ class App extends Component {
             Footer
           </div>
 
-          <style jsx>{`
+          <style>{`
             .container {
               min-height: 100vh;
               display: flex;
