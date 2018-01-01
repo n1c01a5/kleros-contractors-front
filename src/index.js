@@ -1,8 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import { generateStore } from './bootstrap/generateStore'
 import App from './bootstrap/App'
 import registerServiceWorker from './bootstrap/registerServiceWorker'
+import './index.css'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const store = generateStore()
+
+ReactDOM.render(
+  <App store={store} />,
+  document.getElementById('root')
+)
+
 registerServiceWorker()
