@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-blockies": "^1.2.2",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17",
-    "styled-jsx": "^2.2.1"
+    "styled-jsx": "^2.2.1",
+    "web3": "^0.20.1"
   },
   "scripts": {
     "start": "react-scripts start",
