@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-// import { getWeb3 } from '../helpers/getWeb3'
+import { getWeb3 } from '../helpers/getWeb3'
 // import _ from 'lodash'
 import Blockies from 'react-blockies'
 import logo from '../assets/kleros.png'
@@ -8,13 +8,6 @@ import logo from '../assets/kleros.png'
 class App extends Component {
 
   render() {
-    // if no web3 show requires metamask page
-    // if (typeof getWeb3() === Error) { => does not work
-    //   return (
-    //     <div>Require web3</div>
-    //   )
-    // }
-    //
     // const cardsContract = [
     //   {
     //     seed: '0x8f7AaEa81ee557AeF373795569D3d308474D2A28',
