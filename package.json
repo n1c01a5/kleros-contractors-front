@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "kleros-api": "^0.0.47",
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-blockies": "^1.2.2",

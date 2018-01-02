@@ -1,5 +1,5 @@
 import _ from 'lodash'
-//import {generateStore} from '../bootstrap/generateStore'
+import {generateStore} from '../bootstrap/generateStore'
 import Web3 from 'web3'
 import { ERRORS } from '../constants/ERRORS'
 
@@ -10,16 +10,17 @@ const web3Initialized = payload => ({
   payload
 })
 
-export const getWeb3 = async () => new Promise((resolve, reject) => {
+export const getWeb3 = () => new Promise((resolve, reject) => {
+  let store = generateStore()
   let web3Instance
 
-  !_.isUndefined(window.web3) && !_.isUndefined(web3.currentProvider)
+  !_.isUndefined(window.web3) && !_.isUndefined(window.web3.currentProvider)
     ? web3Instance = new Web3(window.web3.currentProvider)
     : web3Instance = new Web3(
         new Web3.providers.HttpProvider(process.env.ETHEREUM_PROVIDER)
       )
 
-  !_.isUndefined(await web3Instance.currentProvider)
+  !_.isUndefined(web3Instance.currentProvider)
     ? resolve(store.dispatch(web3Initialized({web3Instance})))
     : reject(new Error({'error': ERRORS.WEB3_NOT_RESOLVED}))
 })

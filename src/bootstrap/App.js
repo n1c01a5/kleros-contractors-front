@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import { getWeb3 } from '../helpers/getWeb3'
+import { getWeb3 } from '../utils/getWeb3'
 // import _ from 'lodash'
 import Blockies from 'react-blockies'
 import logo from '../assets/kleros.png'
