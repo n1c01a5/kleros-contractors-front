@@ -7,6 +7,15 @@ import logo from '../assets/kleros.png'
 
 class App extends Component {
 
+  componentWillMount = () => {
+    this.initWeb3()
+  }
+
+  initWeb3 = async () => {
+    const test1 = await getWeb3()
+    console.log('test1',test1)
+  }
+
   render() {
     // const cardsContract = [
     //   {

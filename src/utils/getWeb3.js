@@ -11,19 +11,15 @@ const web3Initialized = payload => ({
 })
 
 export const getWeb3 = async () => new Promise((resolve, reject) => {
-  // Wait for loading completion to avoid race conditions with web3 injection timing.
-  window.addEventListener('load', dispatch => {
-    const web3 = window.web3
-    let localWeb3
+  let web3Instance
 
-    web3 && !_.isUndefined(web3.currentProvider)
-      ? localWeb3 = new Web3(window.web3.currentProvider)
-      : localWeb3 = new Web3(
-          new Web3.providers.HttpProvider(process.env.ETHEREUM_PROVIDER)
-        )
+  !_.isUndefined(window.web3) && !_.isUndefined(web3.currentProvider)
+    ? web3Instance = new Web3(window.web3.currentProvider)
+    : web3Instance = new Web3(
+        new Web3.providers.HttpProvider(process.env.ETHEREUM_PROVIDER)
+      )
 
-    !_.isUndefined(localWeb3.currentProvider)
-      ? resolve(store.dispatch(web3Initialized({web3Instance: localWeb3})))
-      : reject(new Error({'error': ERRORS.WEB3_NOT_RESOLVED}))
-  })
+  !_.isUndefined(await web3Instance.currentProvider)
+    ? resolve(store.dispatch(web3Initialized({web3Instance})))
+    : reject(new Error({'error': ERRORS.WEB3_NOT_RESOLVED}))
 })
