@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
-import { Provider } from 'react-redux'
+import { Provider,connect } from 'react-redux'
 import { getWeb3 } from '../utils/getWeb3'
 // import _ from 'lodash'
 import Blockies from 'react-blockies'
+import * as contractsDux from '../duxs/contracts'
 import logo from '../assets/kleros.png'
 
 class App extends Component {
+
+  state = {
+    addingContract: false,
+    loadingContracts: false,
+    creatingContract: false
+  }
 
   componentWillMount = () => {
     this.initWeb3()
@@ -14,6 +21,11 @@ class App extends Component {
   initWeb3 = async () => {
     const test1 = await getWeb3()
     console.log('test1',test1)
+  }
+
+  componentDidMount() {
+    const { fetchContracts } = this.props
+    fetchContracts()
   }
 
   render() {
@@ -281,4 +293,10 @@ class App extends Component {
   }
 }
 
-export default App;
+
+export default connect(
+  state => ({}),
+  {
+    fetchContracts: contractsDux.fetchContracts,
+  }
+)(App)
